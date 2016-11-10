@@ -203,8 +203,8 @@ extension SyncUser {
                                 onCompletion: completion)
     }
 
-    /// An array of all valid, logged-in users.
-    public static var all: [SyncUser] {
+    /// A dictionary of all valid, logged-in user identities corresponding to their `SyncUser` objects.
+    public static var all: [String: SyncUser] {
         return __allUsers()
     }
 
@@ -340,8 +340,8 @@ extension SyncUser {
                                      onCompletion: completion)
     }
 
-    /// An array of all valid, logged-in users.
-    @nonobjc public static func allUsers() -> [SyncUser] {
+    /// A dictionary of all valid, logged-in user identities corresponding to their `SyncUser` objects.
+    @nonobjc public static func allUsers() -> [String: SyncUser] {
         return __allUsers()
     }
 

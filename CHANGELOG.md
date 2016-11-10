@@ -8,7 +8,8 @@ x.x.x Release notes (yyyy-MM-dd)
   `+[RLMSyncCredential credentialWithUsername:password:register:]`.
 * Rename `+[RLMSyncUser authenticateWithCredential:]` to
   `+[RLMSyncUser logInWithCredential:]`.
-* Rename `+[RLMSyncUser all]` to:
+* Change `+[RLMSyncUser all]` to return a dictionary of identifiers to users and
+  rename to:
   * `+[RLMSyncUser allUsers]` in Objective-C.
   * `SyncUser.allUsers()` in Swift 2.
   * `SyncUser.all` in Swift 3.
