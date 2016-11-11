@@ -18,7 +18,7 @@
 
 #import "RLMSyncUtil.h"
 
-#import "RLMSyncCredential.h"
+#import "RLMSyncCredentials.h"
 
 typedef void(^RLMSyncCompletionBlock)(NSError * _Nullable, NSDictionary * _Nullable);
 typedef void(^RLMSyncBasicErrorReportingBlock)(NSError * _Nullable);
