@@ -310,6 +310,7 @@ download_core() {
     CORE_TAR="${TMP_DIR}/core-${REALM_CORE_VERSION}.tar.xz"
     if [ ! -f "${CORE_TAR}" ]; then
         local CORE_URL="https://static.realm.io/downloads/core/realm-core-${REALM_CORE_VERSION}.tar.xz"
+        echo "CORE_URL ${CORE_URL}"
         set +e # temporarily disable immediate exit
         local ERROR # sweeps the exit code unless declared separately
         ERROR=$(curl --fail --silent --show-error --location "$CORE_URL" --output "${CORE_TMP_TAR}" 2>&1 >/dev/null)
@@ -342,6 +343,7 @@ download_sync() {
     if [ ! -f "${SYNC_TAR}" ]; then
         local SYNC_URL="http://static.ifels.cn/software/realm-sync-cocoa-${REALM_SYNC_VERSION}.tar.xz"
         #local SYNC_URL="https://static.realm.io/downloads/sync/realm-sync-cocoa-${REALM_SYNC_VERSION}.tar.xz"
+        echo "SYNC_URL ${SYNC_URL}"
         set +e # temporarily disable immediate exit
         local ERROR # sweeps the exit code unless declared separately
         ERROR=$(curl --fail --silent --show-error --location "$SYNC_URL" --output "${SYNC_TMP_TAR}" 2>&1 >/dev/null)
